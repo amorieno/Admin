@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База знаний</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="choices.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container flex">
+    <div class="categories">
+      <h2 class="categories__header">Категории</h2>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Динозавры</span>
+      </label>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Медведи</span>
+      </label>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Косули</span>
+      </label>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Лисы</span>
+      </label>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Волки</span>
+      </label>
+      <label class="categories__label">
+        <input type="checkbox" class="checkbox">
+        <span class="checkbox__text" tabindex="0">Олени и лоси</span>
+      </label>
+    </div>
+
+  <div class="materials__div">
+    <select name="select" class="materials" tabindex="0" accesskey="s">
+      <option value="Материал">Материал</option>
+      <option value="Древесина">Древесина</option>
+      <option value="Металл">Металл</option>
+      <option value="Камень">Камень</option>
+      <option value="Пластик">Пластик</option>
+      <option value="Композитный">Композитный</option>
+      <option value="Гипс">Гипс</option>
+    </select>
+  </div>
+
+    <div class="map__container">
+      <div id="map" class="map"></div>
+    </div>
+
+    <div class="custom-scroll scrollbar" data-simplebar>
+      <p class="custom__text">Сложно сказать, почему многие известные личности представлены в&nbsp;исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для первоочередных требований.</p>
+    </div>
+
+    <div class="form__div">
+      <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form">
+        <label class="form__label">
+        <input class="form__input input-name" name="Имя" type="text" placeholder="Имя*" data-validate-field="name">
+        </label>
+        <label class="form__label">
+        <input class="form__input input-tel" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+        </label>
+        <label class="form__label">
+        <input class="form__input input-email" name="email" type="email" placeholder="Email*" data-validate-field="mail">
+        </label>
+        <button class="form__btn">Заказать</button>
+      </form>
+    </div>
+
+    <div class="tooltip__div">
+      <p class="tooltip__text">
+        Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+        <span class="tooltip-container tooltip-2">
+          <span class="tooltip" tabindex="0">
+            <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+            </svg>
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+  <script src="libs/choices.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="libs/just-validate.min.js"></script>
+  <script src="libs/inputmask.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="https://rawcdn.githack.com/RobinHerbots/Inputmask/a95afe64e7467eb14eb8aa8ccbfb6340a46fb8e3/dist/inputmask.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f476e28d-bb71-426d-be90-da5b6aa7e056&lang=ru_RU"></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
